@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #007BFF;
+        }
+        .details {
+            margin-top: 20px;
+        }
+        .details p {
+            margin: 5px 0;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>New {{user.type}} Registration - Verification Required</h1>
+        <p>A new {{user.type}} has registered and requires verification. Please review the details below:</p>
+
+        <div class="details">
+            <p><strong>Name:</strong> {{user.firstName}} {{user.lastName}}</p>
+            <p><strong>Email:</strong> {{user.email}}</p>
+            <p><strong>Work Address:</strong> {{user.workAddress}}</p>
+            <p><strong>Profession:</strong> {{user.profession}}</p>
+            <p><strong>Company:</strong> {{user.companyName}}</p>
+            {{#if user.workID}}
+            <p><strong>Work ID:</strong> <a href="{{user.workID}}">View ID</a></p>
+            {{/if}}
+            {{#if vehicle}}
+            <h3>Vehicle Details</h3>
+            <p><strong>Model:</strong> {{vehicle.model}}</p>
+            <p><strong>Color:</strong> {{vehicle.color}}</p>
+            <p><strong>Plate Number:</strong> {{vehicle.plateNumber}}</p>
+            <p><strong>Seats:</strong> {{vehicle.seatNumber}}</p>
+            {{/if}}
+        </div>
+
+        <a href="{{verificationLink}}" class="button">Click here to verify this user</a>
+    </div>
+</body>
+</html>
