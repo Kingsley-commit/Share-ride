@@ -1,4 +1,4 @@
-# Share-Ride
+# Share-Ride/Ride-Pal
 
 **Share-Ride/Ride-Pal** is a Node.js/Express backend API for a share-ride platform. It lets passengers and drivers register, publish and join routes, start rides, rate each other, and handles email verification, image uploads, and geocoding via Mapbox.
 
@@ -41,7 +41,7 @@
 
 ### 1. Clone the repo  
 ```bash
-git clone https://github.com/<your-username>/ride-pal.git
+git clone https://github.com/<Kingsley-commit>/ride-pal.git
 cd ride-pal
 ````
 
@@ -181,7 +181,7 @@ docker run -p 4000:4000 \
 
 ## 🤝 Contributing
 
-1. Fork it ([https://github.com/your-username/ride-pal/fork](https://github.com/your-username/ride-pal/fork))
+1. Fork it ([https://github.com/Kingsley-commit/share-ride/fork])
 2. Create your feature branch: `git checkout -b feature/YourFeature`
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin feature/YourFeature`
